@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Encabezado */
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgb(104, 104, 104);
+    position: fixed;
+    z-index: 30;
+}
+
+.logo-container {
+    position: relative;
+    left: 5%;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+span {
+    color: rgb(255, 85, 7);
+}
+
+.ul {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 15%;
+}
+
+.li {
+    padding: 20px 20px 0 30px;
+    list-style: none;
+    color: whitesmoke;
+}
+
+ a, .li-btn {
+    color: whitesmoke;
+}
+
+.li-btn {
+    background-color: rgb(255, 85, 7);
+    padding: 20px;
+    margin-left: 30px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5%;
+    color: whitesmoke;
+    transition: all 0.8s;
+}
+
+.li-btn:hover {
+    background-color:  rgb(199, 65, 3);
+}
+
+.btn-menu {
+    display: none;
+    cursor: pointer;
+}
+
+
+/* estilos del body */
+
+.container {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 300px;
+    align-items: center;
+
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom:  20px;
+    color: rgb(83, 83, 83);
+}
+
+h2 {
+    color: rgb(83, 83, 83);
+    font-weight: lighter;
+}
+
+.input-search {
+
+    margin: 20px;
+    border-radius: 30px;
+    border: 1px solid gray;
+    width: 40%;
+    height: 15%;
+    padding-left: 20px;
+    
+}
+
+::placeholder {
+    color: grey;
+    padding: 10px;
+    border-style: none;
+    
+
+    
+}
+
+.input-search:focus {
+    outline: none;
+    padding: 20px;
+}
+
+.container-img {
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+img {
+
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(85%);
+    transition: all 0.5s;
+
+
+}
+
+.container-divs {
+    
+    margin: 10px;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+img:hover {
+
+    transform: scale(1.01);
+    filter: brightness(110%);
+    
+}
+
+.container, .container-img {
+    position: relative;
+    top: 130px;
+}
+
+
+
+/* responsive */
+
+@media only screen and (max-width: 1350px) {
+    .ul {
+        display: none;
+    }
+
+    .header {
+        justify-content: space-around;
+    }
+
+    .btn-menu {
+
+        display:block;
+        border: 0;
+        cursor: pointer;
+        outline: none;
+        
+    }
+
+    .fa-bars {
+
+        color:  rgb(199, 65, 3); 
+        font-size: 40px;
+        background-color: rgb(36, 36, 36); 
+
+    }
+
+    h1 {
+
+        font-size: 2em;
+
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    h1 {
+
+        font-size: 1.5em;
+
+    }
+
+    .input-search {
+
+        width: 60%;
+
+    }
+
+    .container-divs, img {
+           
+        width: 300px;
+        height: 360px;
+        
+    }
+
+    @media only screen and (max-width: 550px ) {
+
+        h1 {
+
+            font-size: 1.2em;
+        }
+
+    
+
+
+        .input-search {
+            
+            width: 65%;
+        }
+
+
+        .container-divs, img {
+           
+            width: 150px;
+            height: 160px;
+            
+        }
+    }              
+
+        @media only screen and (max-width: 350px ) {
+
+
+        h1 {
+
+            font-size: 1em;
+        }
+
+        h2 {
+            font-size: 0.5;
+        }
+
+        .input-search {
+            
+            width: 70%;
+        }
+
+
+        .container-divs, img {
+           
+            width: 120px;
+            height: 150px;
+            
+        }
+
+        .fa-bars {
+            font-size: 30px;
+        }
+
+        
+    }
+
+    @media only screen and (max-width: 290px ) {
+
+        h1 {
+
+            font-size: 1em;
+        }
+
+        h2 {
+            font-size: 20px
+        }
+
+        .input-search {
+            
+            width: 80%;
+        }
+
+
+        .container-divs, img {
+           
+            width: 100px;
+            height: 120px;
+            
+        }
+
+        .fa-bars {
+            font-size: 25px;
+        }
+
+    }
